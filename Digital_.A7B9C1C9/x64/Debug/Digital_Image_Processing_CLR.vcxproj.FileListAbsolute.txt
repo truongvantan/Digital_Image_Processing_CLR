@@ -1,0 +1,13 @@
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\Digital_Image_Processing_CLR.vcxproj.AssemblyReference.cache
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.MainForm.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\Digital_Image_Processing_CLR.vcxproj.GenerateResource.cache
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.LogTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.GammaTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.AlphaBetaTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.OpenCV_Temp.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVD.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVDBackgroundSubtraction.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormAffineTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVDExtractBackgroundBasic.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVDCompressImage.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FourierTransform.resources

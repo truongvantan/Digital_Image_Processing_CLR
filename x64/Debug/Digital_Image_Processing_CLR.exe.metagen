@@ -1,0 +1,59 @@
+  DigitalImageProcessingCLR.AlphaBetaTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormAffineTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormSVD.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormSVDBackgroundSubtraction.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormSVDCompressImage.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormSVDExtractBackgroundBasic.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FourierTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.GammaTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.LogTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.MainForm.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.OpenCV_Temp.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Digital_Image_Processing_CLR, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class DigitalImageProcessingCLR.AlphaBetaTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormAffineTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormSVD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormSVDBackgroundSubtraction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormSVDCompressImage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormSVDExtractBackgroundBasic: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FourierTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.GammaTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.LogTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.OpenCV_Temp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

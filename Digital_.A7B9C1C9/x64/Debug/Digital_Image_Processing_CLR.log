@@ -1,0 +1,25 @@
+﻿  FourierTransform.cpp
+  MainForm.cpp
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormAffineTransform.h(812,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'MainForm.cpp')
+  
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormAffineTransform.h(813,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'MainForm.cpp')
+  
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormAffineTransform.h(841,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'MainForm.cpp')
+  
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormAffineTransform.h(842,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'MainForm.cpp')
+  
+  Generating Code...
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(113,1): warning C4793: 'cv::cuda::GpuMat::GpuMat': function compiled as native:
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(113,1): warning C4793: 	Found an intrinsic not supported in managed code
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(511,1): warning C4793: 'cv::cuda::HostMem::HostMem': function compiled as native:
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(511,1): warning C4793: 	Found an intrinsic not supported in managed code
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(113,1): warning C4793: 'cv::cuda::GpuMat::GpuMat': function compiled as native:
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(113,1): warning C4793: 	Found an intrinsic not supported in managed code
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(511,1): warning C4793: 'cv::cuda::HostMem::HostMem': function compiled as native:
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(511,1): warning C4793: 	Found an intrinsic not supported in managed code
+  AlphaBetaTransform.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Digital_Image_Processing_CLR.vcxproj -> D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\x64\Debug\Digital_Image_Processing_CLR.exe
