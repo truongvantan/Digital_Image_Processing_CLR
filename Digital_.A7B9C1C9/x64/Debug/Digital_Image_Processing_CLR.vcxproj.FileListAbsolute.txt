@@ -11,3 +11,6 @@ D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVDExtractBackgroundBasic.resources
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormSVDCompressImage.resources
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FourierTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormFourierTransform.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormFFTComputeMagnitudeAndPhase.resources
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\DigitalImageProcessingCLR.FormFourierTransformBasic.resources

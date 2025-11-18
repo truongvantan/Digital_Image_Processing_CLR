@@ -662,6 +662,9 @@ namespace DigitalImageProcessingCLR {
 		CommonMethods::showTooltipInListBoxItem(listBoxImagePath, toolTip1, e);
 	}
 	private: System::Void listBoxImagePath_SelectedValueChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (listBoxImagePath->SelectedIndex < 0) {
+			return;
+		}
 		System::String^ imagePathSelected = listBoxImagePath->SelectedItem->ToString();
 		CommonMethods::loadImagePathToPictureBox(picBoxOriginalImage, imagePathSelected);
 	}

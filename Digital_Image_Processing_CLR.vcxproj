@@ -89,7 +89,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>opencv_world480d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
@@ -134,6 +134,9 @@
     <ClCompile Include="AlphaBetaTransform.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="FormAffineTransform.cpp" />
+    <ClCompile Include="FormFFTComputeMagnitudeAndPhase.cpp" />
+    <ClCompile Include="FormFourierTransform.cpp" />
+    <ClCompile Include="FormFourierTransformBasic.cpp" />
     <ClCompile Include="FormSVD.cpp" />
     <ClCompile Include="FormSVDBackgroundSubtraction.cpp" />
     <ClCompile Include="FormSVDCompressImage.cpp" />
@@ -150,6 +153,15 @@
     </ClInclude>
     <ClInclude Include="Common.h" />
     <ClInclude Include="FormAffineTransform.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormFFTComputeMagnitudeAndPhase.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormFourierTransform.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormFourierTransformBasic.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormSVD.h">
@@ -187,6 +199,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAffineTransform.resx">
       <DependentUpon>FormAffineTransform.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFFTComputeMagnitudeAndPhase.resx">
+      <DependentUpon>FormFFTComputeMagnitudeAndPhase.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFourierTransform.resx">
+      <DependentUpon>FormFourierTransform.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFourierTransformBasic.resx">
+      <DependentUpon>FormFourierTransformBasic.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSVD.resx">
       <DependentUpon>FormSVD.h</DependentUpon>

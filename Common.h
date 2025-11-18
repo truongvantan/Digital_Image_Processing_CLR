@@ -12,6 +12,8 @@ namespace CommonMethods
 	cv::Mat getHistogramMatrix(cv::Mat img);
 	System::Drawing::Bitmap^ getBitmapFromMat(cv::Mat matImage, System::Drawing::Imaging::PixelFormat pixelFormat, size_t sizeMemcpy);
 	System::Drawing::Bitmap^ getBitmapFromMat(cv::Mat matImage);
+	//System::Drawing::Bitmap^ getBitmapFromMat2(const cv::Mat& cvImage);
+	System::Drawing::Bitmap^ getBitmapFromMat2(cv::Mat matImage);
 	void loadImagePathToListBox(System::Windows::Forms::OpenFileDialog^ openFileDialog, System::Windows::Forms::ListBox^ listBox);
 	void loadImageToPictureBox(cv::Mat mat, System::Windows::Forms::PictureBox^ pictureBox);
 	void loadCvMatToPictureBox(cv::Mat mat, System::Windows::Forms::PictureBox^ pictureBox);

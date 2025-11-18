@@ -1,4 +1,4 @@
-#include "Common.h"
+﻿#include "Common.h"
 
 namespace CommonMethods
 {
@@ -102,6 +102,57 @@ namespace CommonMethods
 		return bitMap;
 	}
 
+	System::Drawing::Bitmap^ getBitmapFromMat2(cv::Mat matImage) {
+		if (matImage.empty()) {
+			return nullptr;
+		}
+
+		cv::Mat converted;
+
+		// Convert to appropriate format for display
+		if (matImage.type() == CV_8UC1) {
+			// Grayscale to color for consistent display
+			cv::cvtColor(matImage, converted, cv::COLOR_GRAY2BGR);
+		}
+		else if (matImage.type() == CV_32FC1) {
+			// Normalize float image to 0-255 and convert to color
+			cv::Mat temp;
+			cv::normalize(matImage, temp, 0, 255, cv::NORM_MINMAX, CV_8UC1);
+			cv::cvtColor(temp, converted, cv::COLOR_GRAY2BGR);
+		}
+		else {
+			converted = matImage;
+		}
+
+		// Ensure we have 3-channel 8-bit image
+		if (converted.channels() != 3 || converted.type() != CV_8UC3) {
+			converted.convertTo(converted, CV_8UC3);
+		}
+
+		System::Drawing::Bitmap^ bitMap = gcnew System::Drawing::Bitmap(
+			converted.cols, converted.rows, System::Drawing::Imaging::PixelFormat::Format24bppRgb);
+
+		System::Drawing::Imaging::BitmapData^ bmpData = bitMap->LockBits(
+			System::Drawing::Rectangle(0, 0, bitMap->Width, bitMap->Height),
+			System::Drawing::Imaging::ImageLockMode::WriteOnly,
+			System::Drawing::Imaging::PixelFormat::Format24bppRgb);
+
+		int stride = bmpData->Stride;
+		unsigned char* bmpPtr = (unsigned char*)bmpData->Scan0.ToPointer();
+
+		for (int y = 0; y < converted.rows; y++) {
+			memcpy(bmpPtr + y * stride, converted.ptr(y), converted.cols * 3);
+		}
+
+		bitMap->UnlockBits(bmpData);
+		return bitMap;
+	}
+
+	/*System::Drawing::Bitmap^ getBitmapFromMat2(const cv::Mat& matImage)
+	{
+
+	}*/
+
 	void loadImageToPictureBox(cv::Mat mat, System::Windows::Forms::PictureBox^ pictureBox)
 	{
 		System::Drawing::Bitmap^ bitMap = getBitmapFromMat(mat, System::Drawing::Imaging::PixelFormat::Format24bppRgb, mat.cols * mat.channels());
@@ -116,7 +167,9 @@ namespace CommonMethods
 
 	void loadCvMatToPictureBox(cv::Mat mat, System::Windows::Forms::PictureBox^ pictureBox)
 	{
-		System::Drawing::Bitmap^ bitMap = getBitmapFromMat(mat);
+		//System::Drawing::Bitmap^ bitMap = getBitmapFromMat(mat);
+		System::Drawing::Bitmap^ bitMap = getBitmapFromMat2(mat);
+
 		if (pictureBox->Image != nullptr)
 		{
 			delete pictureBox->Image;
@@ -128,16 +181,10 @@ namespace CommonMethods
 	void loadImagePathToListBox(System::Windows::Forms::OpenFileDialog^ openFileDialog, System::Windows::Forms::ListBox^ listBox)
 	{
 		// open file dialog
-		//openFileDialog->DereferenceLinks = false;
 		openFileDialog->Title = "Select your images";
 		openFileDialog->Filter = "Image Files | *.bmp; *.jpg; *.png; *.tif; *.webp | All Files (*.*) |*.*||";
 		openFileDialog->InitialDirectory = "D:\\Tan\\Sample_Data";
 		openFileDialog->Multiselect = true;
-		//openFileDialog->InitialDirectory = "C:\\";
-		/*openFileDialog->RestoreDirectory = false;
-		openFileDialog->SupportMultiDottedExtensions = true;
-		openFileDialog->FilterIndex = 1;*/
-
 
 		array<System::String^>^ arrFilePaths;
 
@@ -151,7 +198,7 @@ namespace CommonMethods
 		}
 
 		// load file paths to list box
-		for each (System::String^ filePath in arrFilePaths)
+		for each (System::String ^ filePath in arrFilePaths)
 		{
 			listBox->Items->Add(filePath);
 		}

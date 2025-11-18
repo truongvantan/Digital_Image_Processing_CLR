@@ -1,5 +1,8 @@
   DigitalImageProcessingCLR.AlphaBetaTransform.resources - Embedded, ContainedInManifestFile, 
   DigitalImageProcessingCLR.FormAffineTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormFFTComputeMagnitudeAndPhase.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormFourierTransform.resources - Embedded, ContainedInManifestFile, 
+  DigitalImageProcessingCLR.FormFourierTransformBasic.resources - Embedded, ContainedInManifestFile, 
   DigitalImageProcessingCLR.FormSVD.resources - Embedded, ContainedInManifestFile, 
   DigitalImageProcessingCLR.FormSVDBackgroundSubtraction.resources - Embedded, ContainedInManifestFile, 
   DigitalImageProcessingCLR.FormSVDCompressImage.resources - Embedded, ContainedInManifestFile, 
@@ -28,6 +31,15 @@ Class DigitalImageProcessingCLR.AlphaBetaTransform: AutoLayout, AnsiClass, Class
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class DigitalImageProcessingCLR.FormAffineTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormFFTComputeMagnitudeAndPhase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormFourierTransform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class DigitalImageProcessingCLR.FormFourierTransformBasic: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class DigitalImageProcessingCLR.FormSVD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

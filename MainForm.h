@@ -7,7 +7,10 @@
 #include "FormAffineTransform.h"
 #include "FormSVDExtractBackgroundBasic.h"
 #include "FormSVDCompressImage.h"
-#include "FourierTransform.h"
+//#include "FourierTransform.h"
+#include "FormFourierTransform.h"
+#include "FormFFTComputeMagnitudeAndPhase.h"
+#include "FormFourierTransformBasic.h"
 
 namespace DigitalImageProcessingCLR {
 
@@ -57,6 +60,9 @@ namespace DigitalImageProcessingCLR {
 	private: System::Windows::Forms::ToolStripMenuItem^ sVDExtractBackgroundBasicToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ sVDCompressImageToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ fourierTransformToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ fourierTransformToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ computeMagnitudeAndPhaseToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ fFTColorImageToolStripMenuItem;
 
 
 
@@ -81,21 +87,24 @@ namespace DigitalImageProcessingCLR {
 			this->logTransformToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->alphaBetaTransformToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->openCVTempToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->fourierTransformToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->decompositionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->sVDToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->sVDBackgroundSubtractionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->sVDExtractBackgroundBasicToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->sVDCompressImageToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->affineTransformToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->fourierTransformToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->fourierTransformToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->computeMagnitudeAndPhaseToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->fFTColorImageToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->toolStripMenuItem1,
-					this->decompositionToolStripMenuItem, this->affineTransformToolStripMenuItem
+					this->decompositionToolStripMenuItem, this->affineTransformToolStripMenuItem, this->fourierTransformToolStripMenuItem1
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -139,6 +148,13 @@ namespace DigitalImageProcessingCLR {
 			this->openCVTempToolStripMenuItem->Size = System::Drawing::Size(188, 22);
 			this->openCVTempToolStripMenuItem->Text = L"OpenCV Temp";
 			this->openCVTempToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::openCVTempToolStripMenuItem_Click);
+			// 
+			// fourierTransformToolStripMenuItem
+			// 
+			this->fourierTransformToolStripMenuItem->Name = L"fourierTransformToolStripMenuItem";
+			this->fourierTransformToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->fourierTransformToolStripMenuItem->Text = L"Fourier Transform";
+			this->fourierTransformToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::fourierTransformToolStripMenuItem_Click);
 			// 
 			// decompositionToolStripMenuItem
 			// 
@@ -185,12 +201,29 @@ namespace DigitalImageProcessingCLR {
 			this->affineTransformToolStripMenuItem->Text = L"AffineTransform";
 			this->affineTransformToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::affineTransformToolStripMenuItem_Click);
 			// 
-			// fourierTransformToolStripMenuItem
+			// fourierTransformToolStripMenuItem1
 			// 
-			this->fourierTransformToolStripMenuItem->Name = L"fourierTransformToolStripMenuItem";
-			this->fourierTransformToolStripMenuItem->Size = System::Drawing::Size(188, 22);
-			this->fourierTransformToolStripMenuItem->Text = L"Fourier Transform";
-			this->fourierTransformToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::fourierTransformToolStripMenuItem_Click);
+			this->fourierTransformToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->computeMagnitudeAndPhaseToolStripMenuItem,
+					this->fFTColorImageToolStripMenuItem
+			});
+			this->fourierTransformToolStripMenuItem1->Name = L"fourierTransformToolStripMenuItem1";
+			this->fourierTransformToolStripMenuItem1->Size = System::Drawing::Size(113, 20);
+			this->fourierTransformToolStripMenuItem1->Text = L"Fourier Transform";
+			// 
+			// computeMagnitudeAndPhaseToolStripMenuItem
+			// 
+			this->computeMagnitudeAndPhaseToolStripMenuItem->Name = L"computeMagnitudeAndPhaseToolStripMenuItem";
+			this->computeMagnitudeAndPhaseToolStripMenuItem->Size = System::Drawing::Size(242, 22);
+			this->computeMagnitudeAndPhaseToolStripMenuItem->Text = L"Compute Magnitude and Phase";
+			this->computeMagnitudeAndPhaseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::computeMagnitudeAndPhaseToolStripMenuItem_Click);
+			// 
+			// fFTColorImageToolStripMenuItem
+			// 
+			this->fFTColorImageToolStripMenuItem->Name = L"fFTColorImageToolStripMenuItem";
+			this->fFTColorImageToolStripMenuItem->Size = System::Drawing::Size(242, 22);
+			this->fFTColorImageToolStripMenuItem->Text = L"FFT Color Image";
+			this->fFTColorImageToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::fFTColorImageToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -245,7 +278,15 @@ namespace DigitalImageProcessingCLR {
 		form->Show();
 	}
 	private: System::Void fourierTransformToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FourierTransform^ form = gcnew FourierTransform();
+		FormFourierTransform^ form = gcnew FormFourierTransform();
+		form->Show();
+	}
+	private: System::Void computeMagnitudeAndPhaseToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormFFTComputeMagnitudeAndPhase^ form = gcnew FormFFTComputeMagnitudeAndPhase();
+		form->Show();
+	}
+	private: System::Void fFTColorImageToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormFourierTransformBasic^ form = gcnew FormFourierTransformBasic();
 		form->Show();
 	}
 }; // class MainForm

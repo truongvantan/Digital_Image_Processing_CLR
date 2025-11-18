@@ -48,6 +48,11 @@ namespace DigitalImageProcessingCLR {
 	private: System::Windows::Forms::PictureBox^ picBoxOriginalPhase;
 
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::PictureBox^ picBoxOutputMagnitudeEnhace;
+
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+	private: System::Windows::Forms::Label^ label5;
 	private: System::ComponentModel::IContainer^ components;
 	protected:
 
@@ -77,9 +82,15 @@ namespace DigitalImageProcessingCLR {
 			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->picBoxOriginalPhase = (gcnew System::Windows::Forms::PictureBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->picBoxOutputMagnitudeEnhace = (gcnew System::Windows::Forms::PictureBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalImage))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalMagnitude))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalPhase))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOutputMagnitudeEnhace))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btnLoadImagePath
@@ -165,15 +176,59 @@ namespace DigitalImageProcessingCLR {
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Original Phase";
 			// 
+			// picBoxOutputMagnitudeEnhace
+			// 
+			this->picBoxOutputMagnitudeEnhace->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->picBoxOutputMagnitudeEnhace->Location = System::Drawing::Point(721, 469);
+			this->picBoxOutputMagnitudeEnhace->Name = L"picBoxOutputMagnitudeEnhace";
+			this->picBoxOutputMagnitudeEnhace->Size = System::Drawing::Size(280, 293);
+			this->picBoxOutputMagnitudeEnhace->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->picBoxOutputMagnitudeEnhace->TabIndex = 2;
+			this->picBoxOutputMagnitudeEnhace->TabStop = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(717, 446);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(229, 20);
+			this->label4->TabIndex = 3;
+			this->label4->Text = L"Output Magnitude Enhance";
+			// 
+			// numericUpDown1
+			// 
+			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->numericUpDown1->Location = System::Drawing::Point(164, 609);
+			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown1->Name = L"numericUpDown1";
+			this->numericUpDown1->Size = System::Drawing::Size(53, 20);
+			this->numericUpDown1->TabIndex = 4;
+			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 131072 });
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(30, 611);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(128, 13);
+			this->label5->TabIndex = 5;
+			this->label5->Text = L"Smoothing Factor (alpha):";
+			// 
 			// FourierTransform
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1486, 851);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->picBoxOriginalPhase);
+			this->Controls->Add(this->picBoxOutputMagnitudeEnhace);
 			this->Controls->Add(this->picBoxOriginalMagnitude);
 			this->Controls->Add(this->picBoxOriginalImage);
 			this->Controls->Add(this->listBoxImagePath);
@@ -184,6 +239,8 @@ namespace DigitalImageProcessingCLR {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalImage))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalMagnitude))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOriginalPhase))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBoxOutputMagnitudeEnhace))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -235,11 +292,40 @@ namespace DigitalImageProcessingCLR {
 		cv::Mat B_phase = computeDFTPhase(B_channel);
 		cv::Mat G_phase = computeDFTPhase(G_channel);
 		cv::Mat R_phase = computeDFTPhase(R_channel);
+
 		// Merge the processed channels back
 		cv::Mat outputPhaseImage = CommonMethods::getOuputMergeBGRChannels(B_phase, G_phase, R_phase);
 		CommonMethods::loadCvMatToPictureBox(outputPhaseImage, this->picBoxOriginalPhase);
 
 
+		// magnitude spectrum enhancement using SVD each channel
+		cv::Mat B_svdMag = magnitudeEnhancementSVD(B_magnitude);
+		cv::Mat G_svdMag = magnitudeEnhancementSVD(G_magnitude);
+		cv::Mat R_svdMag = magnitudeEnhancementSVD(R_magnitude);
+
+		// Merge the processed channels back
+		cv::Mat outputSVDEnhancedMagnitudeImage = CommonMethods::getOuputMergeBGRChannels(B_svdMag, G_svdMag, R_svdMag);
+		CommonMethods::loadCvMatToPictureBox(outputSVDEnhancedMagnitudeImage, this->picBoxOutputMagnitudeEnhace);
+	}
+
+	private: cv::Mat magnitudeEnhancementSVD(const cv::Mat& matMagnitude) {
+		cv::Mat matMagnitudeClone = matMagnitude.clone();
+		cv::Mat U, S, Vt;
+		cv::SVD::compute(matMagnitude, S, U, Vt, cv::SVD::NO_UV);
+
+		// create adaptive weighting factor "lambda" using the largest singular value Smax
+		// lambda = (Smax - Smin)/Smax
+		double Smax = S.at<float>(0, 0);
+		double Smin = S.at<float>(S.rows - 1, 0);
+		double lambda = (Smax - Smin) / Smax;
+
+		// enhance magnitude spectrum
+		cv::Mat matMagnitudeEnhanced = matMagnitudeClone + lambda * Smax;
+
+		// normalize to [0,1]
+		cv::normalize(matMagnitudeEnhanced, matMagnitudeEnhanced, 0, 1, cv::NORM_MINMAX);
+
+		return matMagnitudeEnhanced;
 
 	}
 	private: cv::Mat computeDFTPhase(const cv::Mat& channel) {
@@ -248,18 +334,23 @@ namespace DigitalImageProcessingCLR {
 		int m = cv::getOptimalDFTSize(channel.rows);
 		int n = cv::getOptimalDFTSize(channel.cols);
 		cv::copyMakeBorder(channel, padded, 0, m - channel.rows, 0, n - channel.cols, cv::BORDER_CONSTANT, cv::Scalar::all(0));
+
 		// Make place for both the complex and the real values
 		cv::Mat planes[] = { cv::Mat_<float>(padded), cv::Mat::zeros(padded.size(), CV_32F) };
 		cv::Mat complexI;
 		cv::merge(planes, 2, complexI);
+
 		// DFT
 		cv::dft(complexI, complexI);
+
 		// Compute the phase
 		cv::split(complexI, planes); // planes[0] = Re(DFT(I)), planes[1] = Im(DFT(I))
 		cv::Mat phaseI;
 		cv::phase(planes[0], planes[1], phaseI);
+
 		// Normalize the phase to [0,1] for display
 		cv::normalize(phaseI, phaseI, 0, 1, cv::NORM_MINMAX);
+
 		return phaseI;
 	}
 

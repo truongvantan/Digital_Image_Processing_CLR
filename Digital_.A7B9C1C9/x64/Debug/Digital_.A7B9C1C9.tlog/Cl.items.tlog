@@ -1,6 +1,9 @@
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\AlphaBetaTransform.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\AlphaBetaTransform.obj
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Common.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\Common.obj
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormAffineTransform.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormAffineTransform.obj
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormFFTComputeMagnitudeAndPhase.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormFFTComputeMagnitudeAndPhase.obj
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormFourierTransform.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormFourierTransform.obj
+D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormFourierTransformBasic.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormFourierTransformBasic.obj
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormSVD.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormSVD.obj
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormSVDBackgroundSubtraction.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormSVDBackgroundSubtraction.obj
 D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\FormSVDCompressImage.cpp;D:\Tan\Source_Code\Visual_C++\Digital_Image_Processing_CLR\Digital_.A7B9C1C9\x64\Debug\FormSVDCompressImage.obj
