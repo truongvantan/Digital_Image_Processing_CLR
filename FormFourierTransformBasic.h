@@ -555,7 +555,7 @@ namespace DigitalImageProcessingCLR {
 
 		// Split channels
 		std::vector<cv::Mat> channels;
-		cv::split(img, channels); // B, G, R
+		cv::split(img, channels);
 		cv::Mat B_Channel = channels[0];
 		cv::Mat G_Channel = channels[1];
 		cv::Mat R_Channel = channels[2];

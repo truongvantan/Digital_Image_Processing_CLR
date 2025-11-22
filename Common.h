@@ -23,5 +23,6 @@ namespace CommonMethods
 	void loadImagePathToPictureBox(System::Windows::Forms::PictureBox^ pictureBox, System::String^ imagePath);
 	cv::Mat readCVMatFromFilePath(System::String^ imagePath);
 	cv::Mat getOuputMergeBGRChannels(const cv::Mat& bChannel, const cv::Mat& gChannel, const cv::Mat& rChannel);
+	void cleanPictureBox(System::Windows::Forms::PictureBox^ pictureBox);
 };
 

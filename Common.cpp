@@ -114,7 +114,7 @@ namespace CommonMethods
 			// Grayscale to color for consistent display
 			cv::cvtColor(matImage, converted, cv::COLOR_GRAY2BGR);
 		}
-		else if (matImage.type() == CV_32FC1) {
+		else if (matImage.type() == CV_32FC1 || matImage.type() == CV_64FC1) {
 			// Normalize float image to 0-255 and convert to color
 			cv::Mat temp;
 			cv::normalize(matImage, temp, 0, 255, cv::NORM_MINMAX, CV_8UC1);
@@ -259,5 +259,13 @@ namespace CommonMethods
 		outputImage.convertTo(outputImage, CV_8UC3, 255.0);
 
 		return outputImage;
+	}
+	void cleanPictureBox(System::Windows::Forms::PictureBox^ pictureBox)
+	{
+		if (pictureBox->Image != nullptr)
+		{
+			delete pictureBox->Image;
+		}
+		pictureBox->Image = nullptr;
 	}
 }
